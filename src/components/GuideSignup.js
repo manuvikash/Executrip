@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { signupFields } from "../constants/formFields";
+import { guideFields } from "../constants/guideFields";
 import FormAction from "./FormAction";
 import Input from "./Input";
 
-const fields = signupFields;
+const fields = guideFields;
 let fieldsState = {};
 
 fields.forEach((field) => (fieldsState[field.id] = ""));
@@ -19,12 +18,6 @@ export default function Signup() {
     e.preventDefault();
     console.log(signupState);
     createAccount();
-  };
-
-  const GuideSignup = () => {
-    const navigate = useNavigate();
-    console.log("Guide signup");
-    navigate("/guide-signup");
   };
 
   //handle Signup API Integration here
@@ -48,15 +41,7 @@ export default function Signup() {
           />
         ))}
         <div className="flex space-x-4">
-          <FormAction handleSubmit={handleSubmit} text="Signup as tourist" />
-          {/* <FormAction handleSubmit={GuideSignup} text="Signup as guide" /> */}
-          <a
-            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 mt-10"
-            onSubmit={GuideSignup}
-            href="/guide-signup"
-          >
-            Signup as guide
-          </a>
+          <FormAction handleSubmit={handleSubmit} text="Start Working!" />
         </div>
       </div>
     </form>
