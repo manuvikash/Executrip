@@ -4,7 +4,7 @@ import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import GuideSignup from "./pages/GuideSignup";
 import GuideCards from "./pages/GuideCards";
-import Navbar from "./components/Navbar";
+import CitySelect from "./pages/CitySelect";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/guide-signup" element={<GuideSignup />} />
           <Route path="/guides" element={<GuideCards />} />
-          <Route path="/nav" element={<Navbar />} />
+          <Route path="/city-select" element={<CitySelect />} />
         </Routes>
       </BrowserRouter>
     </section>

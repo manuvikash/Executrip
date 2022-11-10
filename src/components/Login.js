@@ -3,6 +3,7 @@ import { loginFields } from "../constants/formFields";
 import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
+import { Redirect } from "react-router-dom";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -16,6 +17,7 @@ export default function Login() {
   };
 
   const handleSubmit = (e) => {
+    var win = window.open("/city-select", "_self");
     e.preventDefault();
     authenticateUser();
   };
