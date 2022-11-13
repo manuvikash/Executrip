@@ -1,45 +1,45 @@
-import person1 from "../images/person1.jpg";
-import person2 from "../images/person2.jpg";
-import person3 from "../images/p3.png";
-import person4 from "../images/p4.png";
-import person5 from "../images/p5.png";
+import person1 from "../images/p16.png";
+import person2 from "../images/p17.png";
+import person3 from "../images/p18.png";
+import person4 from "../images/p19.png";
+import person5 from "../images/p20.png";
 import Navbar from "../components/Navbar";
 
 const Guidelist = [
   {
-    name: "John Doe",
+    name: "Yadav Reddy",
     image: person1,
-    lang: "English, German, Dutch",
-    age: "30",
-    exp: "5",
+    lang: "English, Telugu, Tamil",
+    age: "22",
+    exp: "2",
   },
   {
-    name: "Raj",
+    name: "Sudeep",
     image: person2,
-    lang: "English, Hindi",
-    age: "28",
-    exp: "3",
-  },
-  {
-    name: "Meera",
-    image: person3,
-    lang: "Malayalam, Tamil",
-    age: "30",
-    exp: "4",
-  },
-  {
-    name: "Vikram",
-    image: person4,
-    lang: "English, Tamil, Kannada ",
+    lang: "English, Tamil",
     age: "40",
     exp: "10",
   },
   {
-    name: "Vairamuthu",
+    name: "Angela",
+    image: person3,
+    lang: "English, French, German",
+    age: "32",
+    exp: "5",
+  },
+  {
+    name: "Latha",
+    image: person4,
+    lang: "English, Tamil, Hindi, Malayalam",
+    age: "42",
+    exp: "13",
+  },
+  {
+    name: "Shreya",
     image: person5,
-    lang: "Tamil",
-    age: "26",
-    exp: "2",
+    lang: "English, Tamil, Marathi",
+    age: "33",
+    exp: "8",
   },
 ];
 
@@ -84,13 +84,13 @@ const Card = (name, image, lang, age, exp) => {
   );
 };
 
-export default function Coimbatore() {
+export default function Kanyakumari() {
   return (
     <section className="w-full h-full">
       <Navbar />
       <div>
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
-          List of guides available in Coimbatore
+          List of guides available in Kanyakumari
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">

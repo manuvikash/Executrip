@@ -4,6 +4,9 @@ import SignupPage from "./pages/Signup";
 import LoginPage from "./pages/Login";
 import GuideSignup from "./pages/GuideSignup";
 import Coimbatore from "./pages/Coimbatore";
+import Chennai from "./pages/Chennai";
+import Madurai from "./pages/Madurai";
+import Kanyakumari from "./pages/Kanyakumari";
 import CitySelect from "./pages/CitySelect";
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/guide-signup" element={<GuideSignup />} />
           <Route path="/coimbatore" element={<Coimbatore />} />
+          <Route path="/chennai" element={<Chennai />} />
+          <Route path="/madurai" element={<Madurai />} />
+          <Route path="/kanyakumari" element={<Kanyakumari />} />
           <Route path="/city-select" element={<CitySelect />} />
         </Routes>
       </BrowserRouter>

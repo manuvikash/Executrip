@@ -1,45 +1,45 @@
-import person1 from "../images/person1.jpg";
-import person2 from "../images/person2.jpg";
-import person3 from "../images/p3.png";
-import person4 from "../images/p4.png";
-import person5 from "../images/p5.png";
+import person1 from "../images/p6.png";
+import person2 from "../images/p7.png";
+import person3 from "../images/p8.jpg";
+import person4 from "../images/p9.jpg";
+import person5 from "../images/p10.jpg";
 import Navbar from "../components/Navbar";
 
 const Guidelist = [
   {
-    name: "John Doe",
+    name: "Rachel Zane",
     image: person1,
-    lang: "English, German, Dutch",
+    lang: "English, Tamil, French",
     age: "30",
     exp: "5",
   },
   {
-    name: "Raj",
+    name: "George Russell",
     image: person2,
-    lang: "English, Hindi",
-    age: "28",
-    exp: "3",
+    lang: "English, Tamil, Malayalam",
+    age: "26",
+    exp: "2",
   },
   {
-    name: "Meera",
+    name: "Anjali",
     image: person3,
-    lang: "Malayalam, Tamil",
-    age: "30",
-    exp: "4",
+    lang: "English, Telugu, Hindi",
+    age: "28",
+    exp: "6",
   },
   {
-    name: "Vikram",
+    name: "Suresh",
     image: person4,
     lang: "English, Tamil, Kannada ",
     age: "40",
     exp: "10",
   },
   {
-    name: "Vairamuthu",
+    name: "Lakshmi",
     image: person5,
-    lang: "Tamil",
-    age: "26",
-    exp: "2",
+    lang: "English, Tamil",
+    age: "30",
+    exp: "7",
   },
 ];
 
@@ -84,13 +84,13 @@ const Card = (name, image, lang, age, exp) => {
   );
 };
 
-export default function Coimbatore() {
+export default function Chennai() {
   return (
     <section className="w-full h-full">
       <Navbar />
       <div>
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
-          List of guides available in Coimbatore
+          List of guides available in Chennai
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">
