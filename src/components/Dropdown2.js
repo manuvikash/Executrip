@@ -39,45 +39,51 @@ export default function DropdownComponent2() {
       >
         <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-md"
-                  )}
-                >
-                  Coimbatore
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-md"
-                  )}
-                >
-                  Chennai
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-md"
-                  )}
-                >
-                  Madurai
-                </a>
-              )}
-            </Menu.Item>
+            <form method="GET" action="/coimbatore">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    type="submit"
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block w-full text-left px-4 py-2 text-md"
+                    )}
+                  >
+                    Coimbatore
+                  </button>
+                )}
+              </Menu.Item>
+            </form>
+            <form method="GET" action="/chennai">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    type="submit"
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block w-full text-left px-4 py-2 text-md"
+                    )}
+                  >
+                    Chennai
+                  </button>
+                )}
+              </Menu.Item>
+            </form>
+            <form method="GET" action="/madurai">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    type="submit"
+                    className={classNames(
+                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      "block w-full text-left px-4 py-2 text-md"
+                    )}
+                  >
+                    Madurai
+                  </button>
+                )}
+              </Menu.Item>
+            </form>
             <form method="GET" action="/kanyakumari">
               <Menu.Item>
                 {({ active }) => (

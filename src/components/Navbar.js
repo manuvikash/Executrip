@@ -60,7 +60,7 @@ export default function Navbar() {
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
                 <a
-                  href="#"
+                  href="/city-select"
                   class="bg-grey-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                   aria-current="page"
                 >

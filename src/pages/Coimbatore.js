@@ -1,7 +1,6 @@
 import person1 from "../images/person1.jpg";
 import person2 from "../images/person2.jpg";
 import Navbar from "../components/Navbar";
-import DropdownComponent from "../components/Dropdown";
 
 const Guidelist = [
   {
@@ -82,22 +81,13 @@ const Card = (name, image, lang, age, exp) => {
   );
 };
 
-export default function GuideCards() {
+export default function Coimbatore() {
   return (
     <section className="w-full h-full">
       <Navbar />
-      <div className="flex justify-end pt-4 px-6 font-bold text-2xl text-purple-500">
-        {/* <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-purple-600">
-          <option>Select city</option>
-          <option>Coimbatore</option>
-          <option>Chennai</option>
-          <option>Madurai</option>
-        </select> */}
-        <DropdownComponent />
-      </div>
       <div>
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
-          List of guides available in selected city
+          List of guides available in Coimbatore
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">
