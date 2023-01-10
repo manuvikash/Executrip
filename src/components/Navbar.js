@@ -79,7 +79,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href="#"
+                  href="/whyus"
                   class="text-grey-300 hover:bg-grey-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Why Us?
