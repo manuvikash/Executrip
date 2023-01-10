@@ -14,8 +14,8 @@ const CitySelect = () => {
         loop
         muted
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-gray-900/30"></div>
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center text-center">
+
+      <div className="absolute top-16 left-0 w-full h-full flex flex-col justify-center text-center">
         <h1 className="text-white text-4xl font-extrabold mb-2">
           Explore Tamil Nadu with{" "}
           <span className="text-purple-400">Executrip!</span>
