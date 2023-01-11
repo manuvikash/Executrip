@@ -1,162 +1,172 @@
 import LogoutIcon from "../assets/logout.png";
 import Profile from "../assets/profile.png";
 import Star from "../assets/star.png";
+import { animate, timeline } from "motion";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      timeline(
+        [
+          [".block1", { y: 7.5 }],
+          [".block1", { rotate: "45deg" }],
+        ],
+        { duration: 0.5 }
+      );
+      animate(
+        ".block2",
+        {
+          opacity: 0,
+        },
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [".block3", { y: -7.5 }],
+          [".block3", { rotate: "-45deg" }],
+        ],
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [
+            ".nav-menu",
+            {
+              transform: "translateX(0vw)",
+              transformOrigin: "right",
+              // borderRadius: "0%",
+            },
+            { duration: 0.5 },
+          ],
+        ],
+        {}
+      );
+    } else {
+      timeline(
+        [
+          [".block1", { rotate: "0deg" }],
+          [".block1", { y: 0 }],
+        ],
+        { duration: 0.5 }
+      );
+      animate(
+        ".block2",
+        {
+          opacity: 1,
+        },
+        { duration: 0.5 }
+      );
+      timeline(
+        [
+          [".block3", { rotate: "0deg" }],
+          [".block3", { y: 0 }],
+        ],
+        {}
+      );
+      timeline(
+        [
+          [
+            ".nav-menu",
+            {
+              transform: "translateX(100vw)",
+              transformOrigin: "right",
+            },
+            { duration: 0.5 },
+          ],
+        ],
+        {}
+      );
+    }
+  }, [isOpen]);
+
   return (
-    <nav class="bg-grey-800 z-50">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              type="button"
-              class="inline-flex items-center justify-center rounded-md p-2 text-grey-400 hover:bg-grey-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-
-              <svg
-                class="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-
-              <svg
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+    <nav className=" fixed z-30 h-auto py-0 w-screen">
+      <div className=" bg-grey-800 shadow-xl w-full flex items-center justify-center  text-white py-2 pb-4 ease-in-out">
+        <div className="md:mx-10 lg:mx-10 flex items-center">
+          <Link to="/city-select">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/db/Zeronet_logo.png?20160308165539"
+              alt="logo"
+              className="h-10 w-10"
+            />
+          </Link>
+        </div>
+        <div className="flex-1"></div>
+        <div className="flex justify-center items-center">
+          <div className="hidden md:flex items-center space-x-3 text-lg mx-10">
+            <Link to="/city-select">
+              <NavItem name="Home" />
+            </Link>
+            <Link to="/">
+              <NavItem name="Discover" />
+            </Link>
+            <Link to="/whyus">
+              <NavItem name="Why us?" />
+            </Link>
+            <button>
+              <img src={Star} className="h-8 w-8"></img>
+            </button>
+            <button>
+              <img src={Profile} className="h-8 w-8"></img>
             </button>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center">
-              <img
-                class="block h-8 w-auto lg:hidden"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/db/Zeronet_logo.png?20160308165539"
-                alt="Your Company"
-              />
-              <img
-                class="hidden h-8 w-auto lg:block"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/db/Zeronet_logo.png?20160308165539"
-                alt="Your Company"
-              />
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <a
-                  href="/city-select"
-                  class="bg-grey-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-
-                <a
-                  href="#"
-                  class="text-grey-300 hover:bg-grey-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Discover
-                </a>
-
-                <a
-                  href="/whyus"
-                  class="text-grey-300 hover:bg-grey-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Why Us?
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div class="relative ml-3 flex space-x-3">
-              <div>
-                <button
-                  type="button"
-                  class="flex rounded-full bg-grey-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-grey-800"
-                  id="user-menu-button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  <a href="/">
-                    <img class="h-8 w-8" src={Star} alt="" />
-                  </a>
-                </button>
-              </div>
-              <a href="/">
-                <img class="h-8 w-8" src={Profile} alt="" />
-              </a>
-
-              {/* <div
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="user-menu-button"
-                tabindex="-1"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-grey-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-0"
-                >
-                  Your Profile
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-grey-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-1"
-                >
-                  Settings
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-grey-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-2"
-                >
-                  Sign out
-                </a>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <a
-            href="/city-select"
-            class="bg-grey-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page"
+          <button
+            className="z-50 space-y-1 mx-2 md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
           >
-            Home
-          </a>
+            <div className="block1 w-7 h-1 bg-white"></div>
+            <div className="block2 w-7 h-1 bg-white"></div>
+            <div className="block3 w-7 h-1 bg-white"></div>
+          </button>
+          <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-semibold text-2xl bg-gradient-to-bl from-purple-800 to-purple-700">
+            <NavbarMobileItem name={"Home"} className="item-1" />
+            <NavbarMobileItem name={"Discover"} className="item-2" />
+            <NavbarMobileItem name={"Why us?"} className="item-3" />
+            <NavbarMobileItem name={"Starred Guides"} className="item-4" />
+            <div className="flex flex-col justify-center items-center w-full px-10 space-y-8">
+              <button>
+                <img src={Profile} className="h-12 w-12"></img>
+              </button>
+              <button>
+                <img src={LogoutIcon} className="h-12 w-12"></img>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   );
 }
+
+const NavItem = ({ name }) => {
+  const [isHover, setIsHover] = useState(false);
+
+  return (
+    <button
+      className="md:visible invisible flex flex-col items-center"
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
+      <p
+        className={`${
+          isHover ? "text-white" : "text-gray-200"
+        } mx-4 my-2 duration-300 font-body text-base md:text-sm`}
+      >
+        {name}
+      </p>
+      <div
+        className={`${
+          !isHover ? "w-1/2" : "w-1/5"
+        } transition-all bg-white h-0.5 rounded-full`}
+      ></div>
+    </button>
+  );
+};
+
+const NavbarMobileItem = ({ name, className }) => {
+  return <div className={`${className}`}>{name}</div>;
+};
