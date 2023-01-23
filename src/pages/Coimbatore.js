@@ -45,7 +45,7 @@ const Guidelist = [
 
 const Card = (name, image, lang, age, exp) => {
   return (
-    <div class="w-full max-w-sm bg-white rounded-lg border border-grey-200 shadow-md dark:bg-grey-800 dark:border-grey-700 mt-10">
+    <div class="mt-10 w-full max-w-sm bg-white rounded-lg border border-grey-200 shadow-md dark:bg-grey-800 dark:border-grey-700">
       <div class="flex flex-col items-center py-10">
         <img
           class="mb-3 w-24 h-24 rounded-full shadow-lg"
@@ -88,6 +88,7 @@ export default function Coimbatore() {
   return (
     <section className="w-full h-full">
       <Navbar />
+      <div className="h-10"></div>
       <div>
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
           List of guides available in Coimbatore

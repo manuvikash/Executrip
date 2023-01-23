@@ -88,6 +88,7 @@ export default function Kanyakumari() {
   return (
     <section className="w-full h-full">
       <Navbar />
+      <div className="h-10"></div>
       <div>
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
           List of guides available in Kanyakumari
