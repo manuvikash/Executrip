@@ -6,10 +6,10 @@ import image3 from "../assets/wu9.jpg";
 
 const WhyUs = () => {
   return (
-    <header className="w-full h-9/10 relative bg-slate overflow-y-auto">
+    <header className="w-full h-screen relative bg-black overflow-y-auto">
       <Navbar />
-      <div className="flex flex-col md:flex-row lg:flex-row mt-16">
-        <div className="md:w-1/2 h-screen">
+      <div className="flex flex-col md:flex-row lg:flex-row mt-16 ">
+        <div className="md:w-1/2 h-screen hidden md:block lg:block">
           <div
             id="carouselExampleSlidesOnly"
             class="carousel slide relative h-full"
@@ -43,7 +43,7 @@ const WhyUs = () => {
 
         <div className="md:w-1/2 h-full flex flex-col pt-10 pl-10 mx-10">
           <h1 className="text-white text-4xl font-extrabold mb-2">
-            Why choose <span className="text-purple-400">Executrips?</span>
+            Why choose <span className="text-purple-400">Executrip?</span>
           </h1>
           <h2 className="text-white text-xl mb-4">
             India's Favourite Travel Buddy

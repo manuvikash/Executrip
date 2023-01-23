@@ -108,11 +108,100 @@ export default function Navbar() {
               <NavItem name="Why us?" />
             </Link>
             <button>
-              <img src={Star} className="h-8 w-8"></img>
+              <a href="/starred">
+                <img src={Star} className="h-8 w-8"></img>
+              </a>
             </button>
-            <button>
+            <button
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               <img src={Profile} className="h-8 w-8"></img>
             </button>
+            <ul
+              className="
+          dropdown-menu
+          min-w-max
+          absolute
+          bg-white
+          text-base
+          z-50
+          float-left
+          py-3
+          list-none
+          text-left
+          rounded-lg
+          shadow-lg
+          mt-5
+          hidden
+          bg-clip-padding
+          border-none
+        "
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a
+                  className="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-black
+              hover:bg-purple-300
+            "
+                  href="#"
+                >
+                  Booking history
+                </a>
+              </li>
+              <li>
+                <a
+                  className="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-black
+              hover:bg-purple-300
+            "
+                  href="#"
+                >
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a
+                  className="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-black
+              hover:bg-purple-300
+            "
+                  href="/"
+                >
+                  Logout
+                </a>
+              </li>
+            </ul>
           </div>
           <button
             className="z-50 space-y-1 mx-2 md:hidden"
@@ -123,18 +212,21 @@ export default function Navbar() {
             <div className="block3 w-7 h-1 bg-white"></div>
           </button>
           <div className="nav-menu h-screen w-full flex flex-col py-32 items-center space-y-6 fixed top-0 right-0 md:hidden font-semibold text-2xl bg-gradient-to-bl from-purple-800 to-purple-700">
-            <NavbarMobileItem name={"Home"} className="item-1" />
+            <a href="/city-select">
+              <NavbarMobileItem name={"Home"} className="item-1" />
+            </a>
             <NavbarMobileItem name={"Discover"} className="item-2" />
-            <NavbarMobileItem name={"Why us?"} className="item-3" />
-            <NavbarMobileItem name={"Starred Guides"} className="item-4" />
-            <div className="flex flex-col justify-center items-center w-full px-10 space-y-8">
-              <button>
-                <img src={Profile} className="h-12 w-12"></img>
-              </button>
-              <button>
-                <img src={LogoutIcon} className="h-12 w-12"></img>
-              </button>
-            </div>
+            <a href="/whyus">
+              <NavbarMobileItem name={"Why us?"} className="item-3" />
+            </a>
+            <a href="/starred">
+              <NavbarMobileItem name={"Starred Guides"} className="item-4" />
+            </a>
+            <NavbarMobileItem name={"Booking history"} className="item-5" />
+            <NavbarMobileItem name={"Settings"} className="item-6" />
+            <a href="/">
+              <NavbarMobileItem name={"Logout"} className="item-7" />
+            </a>
           </div>
         </div>
       </div>

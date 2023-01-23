@@ -5,6 +5,7 @@ import person4 from "../images/p14.png";
 import person5 from "../images/p15.png";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
+import star from "../assets/starcolor.png";
 
 const Guidelist = [
   {
@@ -44,15 +45,16 @@ const Guidelist = [
   },
 ];
 
-export default function Madurai() {
+export default function Starred() {
   return (
     <section className="w-full h-full">
       <Navbar />
       <div className="h-10"></div>
-      <div>
-        <h1 className="font-extrabold text-3xl text-purple-600 pt-8 px-10">
-          List of guides available in Madurai
+      <div className="flex flex-row items-center">
+        <h1 className="font-extrabold text-3xl text-purple-600 pt-8 pl-10">
+          Starred guides
         </h1>
+        <img src={star} className="h-8 mt-8 ml-2" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">
         {Guidelist.map((guide) => {

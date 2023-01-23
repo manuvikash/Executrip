@@ -9,7 +9,7 @@ import Madurai from "./pages/Madurai";
 import Kanyakumari from "./pages/Kanyakumari";
 import CitySelect from "./pages/CitySelect";
 import WhyUs from "./pages/WhyUs";
-
+import Starred from "./pages/Starred";
 function App() {
   return (
     <section>
@@ -24,6 +24,7 @@ function App() {
           <Route path="/kanyakumari" element={<Kanyakumari />} />
           <Route path="/city-select" element={<CitySelect />} />
           <Route path="/whyus" element={<WhyUs />} />
+          <Route path="/starred" element={<Starred />} />
         </Routes>
       </BrowserRouter>
     </section>
