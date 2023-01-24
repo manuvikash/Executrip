@@ -4,7 +4,7 @@ import person3 from "../images/p13.png";
 import person4 from "../images/p14.png";
 import person5 from "../images/p15.png";
 import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import Card from "../components/ShortlistedCard";
 import star from "../assets/starcolor.png";
 
 const Guidelist = [
@@ -52,7 +52,7 @@ export default function Starred() {
       <div className="h-10"></div>
       <div className="flex flex-row items-center">
         <h1 className="font-extrabold text-3xl text-purple-600 pt-8 pl-10">
-          Starred guides
+          Shortlisted guides
         </h1>
         <img src={star} className="h-8 mt-8 ml-2" />
       </div>

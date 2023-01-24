@@ -108,7 +108,7 @@ export default function Navbar() {
               <NavItem name="Why us?" />
             </Link>
             <button>
-              <a href="/starred">
+              <a href="/shortlistedguides">
                 <img src={Star} className="h-8 w-8"></img>
               </a>
             </button>
