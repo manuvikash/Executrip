@@ -9,6 +9,7 @@ import Madurai from "./pages/Madurai";
 import Kanyakumari from "./pages/Kanyakumari";
 import CitySelect from "./pages/CitySelect";
 import WhyUs from "./pages/WhyUs";
+import BookConf  from "./pages/BookConf";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/kanyakumari" element={<Kanyakumari />} />
           <Route path="/city-select" element={<CitySelect />} />
           <Route path="/whyus" element={<WhyUs />} />
+          <Route path="/book-conf" element={<BookConf />} />
         </Routes>
       </BrowserRouter>
     </section>

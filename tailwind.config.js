@@ -52,7 +52,8 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [require('tw-elements/dist/plugin')],
 };
