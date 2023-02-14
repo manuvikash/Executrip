@@ -13,6 +13,7 @@ const Guidelist = [
     lang: "English, German, Dutch",
     age: "30",
     exp: "5",
+    star: 5,
   },
   {
     name: "Raj",
@@ -20,6 +21,7 @@ const Guidelist = [
     lang: "English, Hindi",
     age: "28",
     exp: "3",
+    star: 3.5,
   },
   {
     name: "Meera",
@@ -27,6 +29,7 @@ const Guidelist = [
     lang: "Malayalam, Tamil",
     age: "30",
     exp: "4",
+    star: 4,
   },
   {
     name: "Vikram",
@@ -34,6 +37,7 @@ const Guidelist = [
     lang: "English, Tamil, Kannada ",
     age: "40",
     exp: "10",
+    star: 2.5,
   },
   {
     name: "Vairamuthu",
@@ -41,6 +45,7 @@ const Guidelist = [
     lang: "Tamil",
     age: "26",
     exp: "2",
+    star: 4,
   },
 ];
 
@@ -61,7 +66,8 @@ export default function Coimbatore() {
             guide.image,
             guide.lang,
             guide.age,
-            guide.exp
+            guide.exp,
+            guide.star
           );
         })}
       </div>

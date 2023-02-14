@@ -13,6 +13,7 @@ const Guidelist = [
     lang: "English, Hindi, Malayalam",
     age: "30",
     exp: "5",
+    star: 2.5,
   },
   {
     name: "Ruben",
@@ -20,6 +21,7 @@ const Guidelist = [
     lang: "Tamil, Hindi, Telugu",
     age: "29",
     exp: "5",
+    star: 3,
   },
   {
     name: "Jithesh Pillai",
@@ -27,6 +29,7 @@ const Guidelist = [
     lang: "English, Tamil",
     age: "45",
     exp: "10",
+    star: 4,
   },
   {
     name: "Manikandan",
@@ -34,6 +37,7 @@ const Guidelist = [
     lang: "English, Tamil",
     age: "50",
     exp: "16",
+    star: 3.5,
   },
   {
     name: "Munusaami",
@@ -41,6 +45,7 @@ const Guidelist = [
     lang: "Tamil",
     age: "55",
     exp: "20",
+    star: 5,
   },
 ];
 
@@ -61,7 +66,8 @@ export default function Madurai() {
             guide.image,
             guide.lang,
             guide.age,
-            guide.exp
+            guide.exp,
+            guide.star
           );
         })}
       </div>

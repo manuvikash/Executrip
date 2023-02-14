@@ -13,6 +13,7 @@ const Guidelist = [
     lang: "English, Tamil, French",
     age: "30",
     exp: "5",
+    star: 5,
   },
   {
     name: "George Russell",
@@ -20,6 +21,7 @@ const Guidelist = [
     lang: "English, Tamil, Malayalam",
     age: "26",
     exp: "2",
+    star: 4.5,
   },
   {
     name: "Anjali",
@@ -27,6 +29,7 @@ const Guidelist = [
     lang: "English, Telugu, Hindi",
     age: "28",
     exp: "6",
+    star: 3.5,
   },
   {
     name: "Suresh",
@@ -34,6 +37,7 @@ const Guidelist = [
     lang: "English, Tamil, Kannada ",
     age: "40",
     exp: "10",
+    star: 2,
   },
   {
     name: "Lakshmi",
@@ -41,6 +45,7 @@ const Guidelist = [
     lang: "English, Tamil",
     age: "30",
     exp: "7",
+    star: 4.5,
   },
 ];
 
@@ -61,7 +66,8 @@ export default function Chennai() {
             guide.image,
             guide.lang,
             guide.age,
-            guide.exp
+            guide.exp,
+            guide.star
           );
         })}
       </div>

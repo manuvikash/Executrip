@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
@@ -45,6 +48,17 @@ module.exports = {
       "grey-700": "#374151",
       "grey-800": "#1F2937",
       "grey-900": "#111827",
+      //add yellow
+      "yellow-50": "#FFFBEB",
+      "yellow-100": "#FEF3C7",
+      "yellow-200": "#FDE68A",
+      "yellow-300": "#FCD34D",
+      "yellow-400": "#FBBF24",
+      "yellow-500": "#F59E0B",
+      "yellow-600": "#D97706",
+      "yellow-700": "#B45309",
+      "yellow-800": "#92400E",
+      "yellow-900": "#78350F",
     },
     fontFamily: {
       ubuntu: ["Ubuntu", "sans-serif"],
@@ -54,5 +68,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('tw-elements/dist/plugin')],
+  plugins: [require("tw-elements/dist/plugin")],
 };

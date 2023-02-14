@@ -14,6 +14,7 @@ const Guidelist = [
     lang: "English, Telugu, Tamil",
     age: "22",
     exp: "2",
+    star: 3.5,
   },
   {
     city: "Kanyakumari",
@@ -22,6 +23,7 @@ const Guidelist = [
     lang: "English, Tamil",
     age: "40",
     exp: "10",
+    star: 4,
   },
   {
     city: "Kanyakumari",
@@ -30,6 +32,7 @@ const Guidelist = [
     lang: "English, French, German",
     age: "32",
     exp: "5",
+    star: 2.5,
   },
   {
     city: "Kanyakumari",
@@ -38,6 +41,7 @@ const Guidelist = [
     lang: "English, Tamil, Hindi, Malayalam",
     age: "42",
     exp: "13",
+    star: 4,
   },
   {
     city: "Kanyakumari",
@@ -46,6 +50,7 @@ const Guidelist = [
     lang: "English, Tamil, Marathi",
     age: "33",
     exp: "8",
+    star: 2.5,
   },
 ];
 
@@ -66,7 +71,8 @@ export default function Kanyakumari() {
             guide.image,
             guide.lang,
             guide.age,
-            guide.exp
+            guide.exp,
+            guide.star
           );
         })}
       </div>
