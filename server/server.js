@@ -1,13 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 5000;
 
 const app = express();
-//middleware
-app.use(cors());
+
 app.use(express.json());
-app.disable("x-powered-by");
+app.use("/api/hello", require("./routes/Routes"));
 
-//HTTP get request
-
-app.get("/", (req, res) => {});
+app.listen(port, () => console.log(`Server started on port ${port}`));
