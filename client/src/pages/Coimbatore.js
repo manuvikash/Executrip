@@ -5,51 +5,17 @@ import person4 from "../images/p4.png";
 import person5 from "../images/p5.png";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
-
-const Guidelist = [
-  {
-    name: "John Doe",
-    image: person1,
-    lang: "English, German, Dutch",
-    age: "30",
-    exp: "5",
-    star: 5,
-  },
-  {
-    name: "Raj",
-    image: person2,
-    lang: "English, Hindi",
-    age: "28",
-    exp: "3",
-    star: 3.5,
-  },
-  {
-    name: "Meera",
-    image: person3,
-    lang: "Malayalam, Tamil",
-    age: "30",
-    exp: "4",
-    star: 4,
-  },
-  {
-    name: "Vikram",
-    image: person4,
-    lang: "English, Tamil, Kannada ",
-    age: "40",
-    exp: "10",
-    star: 2.5,
-  },
-  {
-    name: "Vairamuthu",
-    image: person5,
-    lang: "Tamil",
-    age: "26",
-    exp: "2",
-    star: 4,
-  },
-];
+import data from "../data/guides.json";
+import React, { useState, useEffect } from "react";
 
 export default function Coimbatore() {
+  const [filteredGuides, setFilteredGuides] = useState([]);
+
+  useEffect(() => {
+    const guides = data.guides;
+    const filtered = guides.filter((guide) => guide.city === "Coimbatore");
+    setFilteredGuides(filtered);
+  }, []);
   return (
     <section className="w-full h-full">
       <Navbar />
@@ -60,7 +26,7 @@ export default function Coimbatore() {
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">
-        {Guidelist.map((guide) => {
+        {filteredGuides.map((guide) => {
           return Card(
             guide.name,
             guide.image,
