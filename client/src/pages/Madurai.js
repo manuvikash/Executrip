@@ -23,6 +23,7 @@ export default function Madurai() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 items-center justify-center">
         {filteredGuides.map((guide) => {
           return Card(
+            guide.id,
             guide.name,
             guide.image,
             guide.lang,
