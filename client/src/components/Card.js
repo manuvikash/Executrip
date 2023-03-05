@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Card(name, image, lang, age, exp, star) {
-  console.log("../" + image);
+export default function Card(id, name, image, lang, age, exp, star) {
   return (
     <div className="w-full max-w-sm bg-white rounded-lg border border-grey-200 shadow-md dark:bg-grey-800 dark:border-grey-700 mt-10">
       <div className="flex flex-col items-center py-10">
@@ -82,7 +81,12 @@ export default function Card(name, image, lang, age, exp, star) {
         </span>
         <div className="flex mt-4 space-x-3 md:mt-6">
           <Link
-            to={"/booking"}
+            // to={{
+            //   pathname: "/book/parameter-data",
+            //   state: { guideId: true },
+            // }}
+            to="/book"
+            state={{ guideId: id }}
             className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
           >
             Book
