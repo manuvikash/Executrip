@@ -88,20 +88,19 @@ export default function BookingPage() {
           <div className="flex w-32"></div>
         </div>
       </div>
-    </section>
+      <div className="items-left flex flex-col ">
+        <div className="mt-10 mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
+          <p className="text-2xl">Place of Stay</p>
+          <p className="items-center flex"></p>
+          <p className="h-auto w-10/12 px-10 py-3 mx-32 bg-purple-300 rounded-full">
+            <input
+              type="text"
+              placeholder=""
+              className="bg-purple-300"
+            />
+          </p>
+        </div>
+      </div>
+    </section >
   );
-}
-
-{
-  /* Date<label for="date-input">From: </label>
-          <input type="date" id="date-input" name="date" />{" "}
-          <label for="date-input">To: </label>
-          <input type="date" id="date-input" name="date" />
-          <br />
-          Rate
-          <br />
-          Place of Stay
-          <br />
-          Specific attractions (if any)
-        </div> */
 }
