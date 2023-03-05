@@ -26,10 +26,27 @@ export default function BookingPage() {
           className="h-40 w-40 border-purple-900 border-8 rounded-2xl"
         />
         <p className="mt-5 font-bold text-lg">
-          Languages : {guide.lang} <br /> Age: {guide.age} <br />
+          Languages: {guide.lang} <br /> Age: {guide.age} <br />
           Work experience: {guide.exp} <br /> Star rating: {guide.star}
+
+        </p>
+      </div>
+      <div className="items-left flex flex-col ">
+        <p className="mt-15 font-bold text-lg">
+          Date<label for="date-input">From: </label>
+          <input type="date" id="date-input" name="date" />    <label for="date-input">To: </label>
+          <input type="date" id="date-input" name="date" />
+
+          <br />Rate
+          <br />Place of Stay
+          <br />Specific attractions
+          (if any)
+
         </p>
       </div>
     </section>
   );
 }
+
+
+
