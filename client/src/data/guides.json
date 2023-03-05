@@ -8,6 +8,7 @@
       "age": "30",
       "exp": "5",
       "star": 5,
+      "rate": 1000,
       "city": "Coimbatore"
     },
     {
@@ -18,6 +19,7 @@
       "age": "28",
       "exp": "3",
       "star": 3.5,
+      "rate": 1000,
       "city": "Coimbatore"
     },
     {
@@ -28,6 +30,7 @@
       "age": "30",
       "exp": "4",
       "star": 4,
+      "rate": 1000,
       "city": "Coimbatore"
     },
     {
@@ -38,6 +41,7 @@
       "age": "40",
       "exp": "10",
       "star": 2.5,
+      "rate": 1000,
       "city": "Coimbatore"
     },
     {
@@ -48,6 +52,7 @@
       "age": "26",
       "exp": "2",
       "star": 4,
+      "rate": 1000,
       "city": "Coimbatore"
     },
     {
@@ -58,6 +63,7 @@
       "lang": "English, Telugu, Tamil",
       "age": "22",
       "exp": "2",
+      "rate": 1000,
       "star": 3.5
     },
     {
@@ -68,6 +74,7 @@
       "lang": "English, Tamil",
       "age": "40",
       "exp": "10",
+      "rate": 1000,
       "star": 4
     },
     {
@@ -78,6 +85,7 @@
       "lang": "English, French, German",
       "age": "32",
       "exp": "5",
+      "rate": 1000,
       "star": 2.5
     },
     {
@@ -88,6 +96,7 @@
       "lang": "English, Tamil, Hindi, Malayalam",
       "age": "42",
       "exp": "13",
+      "rate": 1000,
       "star": 4
     },
     {
@@ -98,6 +107,7 @@
       "lang": "English, Tamil, Marathi",
       "age": "33",
       "exp": "8",
+      "rate": 1000,
       "star": 2.5
     },
     {
@@ -108,6 +118,7 @@
       "lang": "English, Hindi, Malayalam",
       "age": "30",
       "exp": "5",
+      "rate": 1000,
       "star": 2.5
     },
     {
@@ -118,6 +129,7 @@
       "lang": "Tamil, Hindi, Telugu",
       "age": "29",
       "exp": "5",
+      "rate": 1000,
       "star": 3
     },
     {
@@ -128,6 +140,7 @@
       "lang": "English, Tamil",
       "age": "45",
       "exp": "10",
+      "rate": 1000,
       "star": 4
     },
     {
@@ -138,6 +151,7 @@
       "lang": "English, Tamil",
       "age": "50",
       "exp": "16",
+      "rate": 1000,
       "star": 3.5
     },
     {
@@ -148,6 +162,7 @@
       "lang": "Tamil",
       "age": "55",
       "exp": "20",
+      "rate": 1000,
       "star": 5
     },
     {
@@ -158,6 +173,7 @@
       "lang": "English, Tamil, French",
       "age": "30",
       "exp": "5",
+      "rate": 1000,
       "star": 5
     },
     {
@@ -168,6 +184,7 @@
       "lang": "English, Tamil, Malayalam",
       "age": "26",
       "exp": "2",
+      "rate": 1000,
       "star": 4.5
     },
     {
@@ -178,6 +195,7 @@
       "lang": "English, Telugu, Hindi",
       "age": "28",
       "exp": "6",
+      "rate": 1000,
       "star": 3.5
     },
     {
@@ -188,6 +206,7 @@
       "lang": "English, Tamil, Kannada ",
       "age": "40",
       "exp": "10",
+      "rate": 1000,
       "star": 2
     },
     {
@@ -198,6 +217,7 @@
       "lang": "English, Tamil",
       "age": "30",
       "exp": "7",
+      "rate": 1000,
       "star": 4.5
     }
   ]
