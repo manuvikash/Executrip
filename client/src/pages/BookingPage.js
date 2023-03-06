@@ -1,8 +1,7 @@
 import Navbar from "../components/Navbar";
 import React from "react";
-import img from "../images/p3.png";
 import { useLocation } from "react-router-dom";
-import data from "../data/guides.json";
+import axios from "axios";
 
 export default function BookingPage() {
   const [startDate, setStartDate] = React.useState("");
@@ -23,12 +22,19 @@ export default function BookingPage() {
   };
   const location = useLocation();
   const guideId = location.state.guideId;
-  const [guide, setGuide] = React.useState({});
-  React.useEffect(() => {
-    const guides = data.guides;
-    const filtered = guides.filter((guide) => guide.id === guideId);
-    setGuide(filtered[0]);
-  }, []);
+  const [guide, setGuide] = React.useState([]);
+  console.log(`http://localhost:5000/api/guide/${guideId}`);
+  axios
+    .get(`http://localhost:5000/api/guide/${guideId}`)
+    .then((response) => {
+      const data = response.data;
+      setGuide(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  console.log(guide);
   return (
     <section className="w-full h-full">
       <Navbar />
@@ -104,14 +110,13 @@ export default function BookingPage() {
             </p>
           </div>
         </div>
-      
-      <div className="items-center flex flex-col ">
-        <h1 className="mt-10 text-2xl font-bold text-white mb-3 bg-blue-900 rounded-3xl px-10 py-3">
-          Confirm Booking
-        </h1>
 
+        <div className="items-center flex flex-col ">
+          <h1 className="mt-10 text-2xl font-bold text-white mb-3 bg-blue-900 rounded-3xl px-10 py-3">
+            Confirm Booking
+          </h1>
+        </div>
       </div>
-    </div>
     </section>
   );
 }
