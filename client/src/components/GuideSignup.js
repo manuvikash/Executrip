@@ -21,7 +21,17 @@ export default function Signup() {
   };
 
   //handle Signup API Integration here
-  const createAccount = () => {};
+  const createAccount = () => {
+    //log all the fields
+    console.log(signupState);
+    fetch("http://localhost:5000/api/addguide", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(signupState),
+    });
+  };
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

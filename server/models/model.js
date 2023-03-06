@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
+const { v4: uuidv4 } = require("uuid");
 
 const guideSchema = new mongoose.Schema({
   id: {
-    type: Number,
-    required: true,
+    type: String,
+    default: uuidv4,
   },
   name: {
     type: String,
@@ -28,6 +29,7 @@ const guideSchema = new mongoose.Schema({
   star: {
     type: Number,
     required: true,
+    default: 0, // set default value to 0
   },
   rate: {
     type: Number,
