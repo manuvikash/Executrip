@@ -25,7 +25,7 @@ const deleteReq = async (req, res) => {
   res.status(200).json({ express: `Delete req with id = ${req.params.id}` });
 };
 
-const ModelCreate = async (req, res) => {
+const AddGuide = async (req, res) => {
   try {
     const newGuide = new Model(req.body);
     const savedGuide = await newGuide.save();
@@ -35,4 +35,4 @@ const ModelCreate = async (req, res) => {
   }
 };
 
-module.exports = { getReq, postReq, putReq, deleteReq, getOneReq, ModelCreate };
+module.exports = { getReq, postReq, putReq, deleteReq, getOneReq, AddGuide };

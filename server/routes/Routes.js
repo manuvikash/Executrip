@@ -7,7 +7,7 @@ const {
   putReq,
   deleteReq,
   getOneReq,
-  ModelCreate,
+  AddGuide,
 } = require("../controllers/Controller");
 
 router.get("/", getReq);
@@ -19,6 +19,6 @@ router.put("/:id", putReq);
 
 router.delete("/:id", deleteReq);
 
-router.post("/post", ModelCreate);
+router.post("/addguide", AddGuide);
 
 module.exports = router;
