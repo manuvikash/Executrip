@@ -92,15 +92,27 @@ export default function BookingPage() {
         <div className="mt-10 mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
           <p className="text-2xl">Place of Stay</p>
           <p className="items-center flex"></p>
-          <p className="h-auto w-10/12 px-10 py-3 mx-32 bg-purple-300 rounded-full">
-            <input
-              type="text"
-              placeholder=""
-              className="bg-purple-300"
-            />
+          <p className="h-auto w-3/5 ml-56 px-10 py-3 mx-32 bg-purple-300 rounded-full">
+            <input type="text" placeholder="" className="bg-purple-300" />
           </p>
         </div>
+        <div className="items-left flex flex-col ">
+          <div className="mt-10 mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
+            <p className="text-2xl">Specific attractions(if any)</p>
+            <p className="items-center flex"></p>
+            <p className="h-auto w-3/5 px-10 py-3 mx-20 bg-purple-300 rounded-full">
+              <input type="text" placeholder="" className="bg-purple-300" />
+            </p>
+          </div>
+        </div>
+      
+      <div className="items-center flex flex-col ">
+        <h1 className="mt-10 text-2xl font-bold text-white mb-3 bg-blue-900 rounded-3xl px-10 py-3">
+          Confirm Booking
+        </h1>
+
       </div>
-    </section >
+    </div>
+    </section>
   );
 }
