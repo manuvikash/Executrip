@@ -6,7 +6,7 @@ export default function Card(id, name, image, lang, age, exp, star) {
       <div className="flex flex-col items-center py-10">
         <img
           className="mb-3 w-24 h-24 rounded-full shadow-lg"
-          src={require("../" + image)}
+          src={image}
           alt="guide image"
         />
         <h5 className="mb-1 text-xl font-medium text-grey-900 dark:text-white">
@@ -81,10 +81,6 @@ export default function Card(id, name, image, lang, age, exp, star) {
         </span>
         <div className="flex mt-4 space-x-3 md:mt-6">
           <Link
-            // to={{
-            //   pathname: "/book/parameter-data",
-            //   state: { guideId: true },
-            // }}
             to="/book"
             state={{ guideId: id }}
             className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"

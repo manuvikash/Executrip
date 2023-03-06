@@ -29,7 +29,6 @@ export default function BookingPage() {
     const filtered = guides.filter((guide) => guide.id === guideId);
     setGuide(filtered[0]);
   }, []);
-  const imageUrl = "../" + guide.image;
   return (
     <section className="w-full h-full">
       <Navbar />
@@ -39,7 +38,7 @@ export default function BookingPage() {
           {guide.name}
         </h1>
         <img
-          src={imageUrl}
+          src={guide.image}
           className="h-48 w-48 border-purple-900 border-8 rounded-2xl"
         />
         <p className="mt-5 font-bold text-lg">
