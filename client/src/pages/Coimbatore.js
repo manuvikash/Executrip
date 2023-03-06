@@ -1,16 +1,22 @@
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
-import data from "../data/guides.json";
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 export default function Coimbatore() {
-  const [filteredGuides, setFilteredGuides] = useState([]);
+  const [data, setData] = useState([]);
+  axios
+    .get("http://localhost:5000/api/guides/Coimbatore")
+    .then((response) => {
+      const data = response.data;
+      setData(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
-  useEffect(() => {
-    const guides = data.guides;
-    const filtered = guides.filter((guide) => guide.city === "Coimbatore");
-    setFilteredGuides(filtered);
-  }, []);
+  const filteredGuides = data;
+
   return (
     <section className="w-full h-full">
       <Navbar />

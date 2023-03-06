@@ -1,11 +1,7 @@
-const Model = require("../models/Model");
+const Guide = require("../models/guide");
 
 const getReq = async (req, res) => {
   res.status(200).json({ express: "get request" });
-};
-
-const getOneReq = async (req, res) => {
-  res.status(200).json({ express: `get request with id = ${req.params.id}` });
 };
 
 const postReq = async (req, res) => {
@@ -27,7 +23,7 @@ const deleteReq = async (req, res) => {
 
 const AddGuide = async (req, res) => {
   try {
-    const newGuide = new Model(req.body);
+    const newGuide = new Guide(req.body);
     const savedGuide = await newGuide.save();
     res.status(201).send({ status: "success", data: savedGuide });
   } catch (err) {
@@ -35,4 +31,34 @@ const AddGuide = async (req, res) => {
   }
 };
 
-module.exports = { getReq, postReq, putReq, deleteReq, getOneReq, AddGuide };
+const guidesInCity = async (req, res) => {
+  try {
+    const city = req.params.city;
+    const guides = await Guide.find({ city: city });
+    res.status(200).send(guides);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+};
+
+const guideByID = async (req, res) => {
+  const guideId = req.params.id;
+  Guide.findOne({ id: req.params.id })
+    .exec()
+    .then((guide) => {
+      res.json(guide);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: err.message });
+    });
+};
+
+module.exports = {
+  getReq,
+  postReq,
+  putReq,
+  deleteReq,
+  guideByID,
+  AddGuide,
+  guidesInCity,
+};
