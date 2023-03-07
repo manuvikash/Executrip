@@ -17,13 +17,27 @@ export default function Login() {
   };
 
   const handleSubmit = (e) => {
-    var win = window.open("/city-select", "_self");
-    e.preventDefault();
+
+    console.log(loginState)
     authenticateUser();
+    e.preventDefault();
   };
 
   //Handle Login API Integration here
-  const authenticateUser = () => {};
+  const authenticateUser = () => {
+    fetch("http://localhost:5000/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginState),
+    }).then((res) => {
+      if(res.status == 200) {
+        console.log(res.status)
+        var win = window.open("/city-select", "_self");
+      }
+    });
+  };
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
