@@ -8,6 +8,9 @@ const {
   deleteReq,
   guideByID,
   AddGuide,
+  AddUser,
+  findUser,
+  logout,
   guidesInCity,
 } = require("../controllers/Controller");
 
@@ -24,6 +27,12 @@ router.delete("/:id", deleteReq);
 router.get("/guide/:id", guideByID);
 
 router.post("/addguide", AddGuide);
+
+router.post("/adduser", AddUser);
+
+router.post("/login", findUser)
+
+router.post("/logout",logout)
 
 router.get("/guides/:city", guidesInCity);
 

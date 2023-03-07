@@ -1,4 +1,7 @@
 const Guide = require("../models/guide");
+const User = require("../models/testuser");
+const Val = require("../validators/register");
+const bcrypt = require("bcrypt");
 
 const getReq = async (req, res) => {
   res.status(200).json({ express: "get request" });
@@ -24,12 +27,58 @@ const deleteReq = async (req, res) => {
 const AddGuide = async (req, res) => {
   try {
     const newGuide = new Guide(req.body);
+    console.log(newGuide);
     const savedGuide = await newGuide.save();
     res.status(201).send({ status: "success", data: savedGuide });
   } catch (err) {
     res.status(500).send({ status: "error", message: err.message });
   }
 };
+
+const AddUser = async (req, res) => {
+  try {
+    const hashedPw = await bcrypt.hash(req.body.password,12);
+    const temp = {
+      uname: req.body.username,
+      mail:req.body['email-address'],
+      pw: hashedPw,
+    }; 
+    const newUser = new User(temp); 
+    const savedUser = await newUser.save();
+    res.status(201).send({ status: "success", data: savedUser });
+    req.session.userId = newUser.uname;
+  } catch (err) {
+    console.log(err.message)
+    res.status(500).send({ status: "error", message: err.message });
+  }
+};
+
+const findUser = async (req, res) => {
+  console.log(req.body)
+  const user = await User.findOne({mail: req.body['email-address']});
+  if (!user){
+    return res.status(404).json({message:"User does not exist"})
+  }
+
+
+  const pwCheck = await bcrypt.compare(req.body.password, user.pw);
+
+  if(!pwCheck){
+    return res.status(401).json({message: 'pw is wrong'})
+  }
+
+
+  req.session.userId = user.uname;
+  res.json({message: "Logged In"}) 
+
+};
+
+const logout = (req,res) => {
+  delete req.session.userId;
+  res.json({message: "logged out"})
+};
+
+
 
 const guidesInCity = async (req, res) => {
   try {
@@ -60,5 +109,8 @@ module.exports = {
   deleteReq,
   guideByID,
   AddGuide,
+  AddUser,
+  findUser,
+  logout,
   guidesInCity,
 };
