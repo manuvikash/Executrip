@@ -10,6 +10,7 @@ import Kanyakumari from "./pages/Kanyakumari";
 import CitySelect from "./pages/CitySelect";
 import WhyUs from "./pages/WhyUs";
 import ShortlistedGuides from "./pages/ShortlistedGuides";
+import Discover from "./pages/Discover";
 import BookingPage from "./pages/BookingPage";
 // import BookConf from "./pages/BookConf";
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/whyus" element={<WhyUs />} />
           <Route path="/shortlistedguides" element={<ShortlistedGuides />} />
           <Route path="/book" element={<BookingPage />} />
+          <Route path="/discover" element={<Discover />} />
+
           {/* <Route path="/book-conf" element={<BookConf />} /> */}
         </Routes>
       </BrowserRouter>

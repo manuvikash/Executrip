@@ -1,4 +1,3 @@
-import LogoutIcon from "../assets/logout.png";
 import Profile from "../assets/profile.png";
 import Star from "../assets/star.png";
 import { animate, timeline } from "motion";
@@ -101,7 +100,7 @@ export default function Navbar() {
             <Link to="/city-select">
               <NavItem name="Home" />
             </Link>
-            <Link to="/">
+            <Link to="/discover">
               <NavItem name="Discover" />
             </Link>
             <Link to="/whyus">
@@ -215,7 +214,9 @@ export default function Navbar() {
             <a href="/city-select">
               <NavbarMobileItem name={"Home"} className="item-1" />
             </a>
-            <NavbarMobileItem name={"Discover"} className="item-2" />
+            <a href="/discover">
+              <NavbarMobileItem name={"Discover"} className="item-2" />
+            </a>
             <a href="/whyus">
               <NavbarMobileItem name={"Why us?"} className="item-3" />
             </a>
