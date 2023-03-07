@@ -10,7 +10,7 @@ export default function FormExtra() {
         />
         <label
           htmlFor="remember-me"
-          className="ml-2 block text-sm text-gray-900"
+          className="ml-2 block text-sm text-white"
         >
           Remember me
         </label>

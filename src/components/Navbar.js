@@ -101,7 +101,7 @@ export default function Navbar() {
             <Link to="/city-select">
               <NavItem name="Home" />
             </Link>
-            <Link to="/">
+            <Link to="/discover">
               <NavItem name="Discover" />
             </Link>
             <Link to="/whyus">
@@ -215,7 +215,9 @@ export default function Navbar() {
             <a href="/city-select">
               <NavbarMobileItem name={"Home"} className="item-1" />
             </a>
+            <a href="/discover">
             <NavbarMobileItem name={"Discover"} className="item-2" />
+            </a>
             <a href="/whyus">
               <NavbarMobileItem name={"Why us?"} className="item-3" />
             </a>

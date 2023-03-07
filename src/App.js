@@ -10,6 +10,7 @@ import Kanyakumari from "./pages/Kanyakumari";
 import CitySelect from "./pages/CitySelect";
 import WhyUs from "./pages/WhyUs";
 import ShortlistedGuides from "./pages/ShortlistedGuides";
+import Discover from "./pages/Discover";
 function App() {
   return (
     <section>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/city-select" element={<CitySelect />} />
           <Route path="/whyus" element={<WhyUs />} />
           <Route path="/shortlistedguides" element={<ShortlistedGuides />} />
+          <Route path="/discover" element={<Discover />} />
         </Routes>
       </BrowserRouter>
     </section>
