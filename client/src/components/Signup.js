@@ -28,6 +28,7 @@ export default function Signup() {
   };
 
   //handle Signup API Integration here
+  //if response status is 500, show prompt that input is invalud
   const createAccount = () => {
     fetch("http://localhost:5000/api/adduser", {
       method: "POST",
@@ -35,7 +36,28 @@ export default function Signup() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(signupState),
-    });
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        if (data.status !== 201) {
+          alert("Invalid input");
+        } else {
+          alert("Account created");
+        }
+      })
+      .catch((error) => {
+        if (error.message === "Failed to fetch") {
+          // handle network error
+        } else {
+          // handle other errors
+        }
+      });
   };
 
   return (

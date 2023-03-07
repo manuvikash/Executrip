@@ -3,6 +3,7 @@ export default function FormAction({
   type = "Button",
   action = "submit",
   text = "Submit",
+  link = "/",
 }) {
   return (
     <>
