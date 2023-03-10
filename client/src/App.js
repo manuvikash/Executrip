@@ -12,7 +12,7 @@ import WhyUs from "./pages/WhyUs";
 import ShortlistedGuides from "./pages/ShortlistedGuides";
 import Discover from "./pages/Discover";
 import BookingPage from "./pages/BookingPage";
-// import BookConf from "./pages/BookConf";
+import BookConf from "./pages/BookConf";
 function App() {
   return (
     <section>
@@ -31,7 +31,7 @@ function App() {
           <Route path="/book" element={<BookingPage />} />
           <Route path="/discover" element={<Discover />} />
 
-          {/* <Route path="/book-conf" element={<BookConf />} /> */}
+          <Route path="/bookconf" element={<BookConf />} />
         </Routes>
       </BrowserRouter>
     </section>

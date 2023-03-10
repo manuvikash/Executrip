@@ -10,6 +10,7 @@ const {
   AddGuide,
   AddUser,
   findUser,
+  getId,
   logout,
   guidesInCity,
 } = require("../controllers/Controller");
@@ -35,6 +36,8 @@ router.post("/login", findUser)
 router.post("/logout",logout)
 
 router.get("/guides/:city", guidesInCity);
+
+router.get("/getId", getId);
 
 router;
 

@@ -111,11 +111,11 @@ export default function BookingPage() {
           </div>
         </div>
 
-        <div className="items-center flex flex-col ">
+        <a href = "/bookconf" className="items-center flex flex-col ">
           <h1 className="mt-10 text-2xl font-bold text-white mb-3 bg-blue-900 rounded-3xl px-10 py-3">
             Confirm Booking
           </h1>
-        </div>
+        </a>
       </div>
     </section>
   );

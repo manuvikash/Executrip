@@ -35,6 +35,8 @@ const AddGuide = async (req, res) => {
   }
 };
 
+
+
 const AddUser = async (req, res) => {
   try {
     const hashedPw = await bcrypt.hash(req.body.password,12);
@@ -69,6 +71,8 @@ const findUser = async (req, res) => {
 
 
   req.session.userId = user.uname;
+  console.log(req.session.userId)
+  console.log(user.uname)
   res.json({message: "Logged In"}) 
 
 };
@@ -76,6 +80,11 @@ const findUser = async (req, res) => {
 const logout = (req,res) => {
   delete req.session.userId;
   res.json({message: "logged out"})
+};
+
+const getId = async (req, res) => {
+    console.log(req.session.userId)
+    res.status(200).send(req.session.userId);
 };
 
 
@@ -111,6 +120,7 @@ module.exports = {
   AddGuide,
   AddUser,
   findUser,
+  getId,
   logout,
   guidesInCity,
 };
