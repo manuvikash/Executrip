@@ -1,34 +1,16 @@
 import Navbar from "../components/Navbar";
 import bgi from "../assets/bg.png";
-import ld from "../assets/ld.png";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+// import ld from "../assets/ld.png";
 
 
 
 export default function BookConf() {
 
-  const [uname, setUname] = useState([]);
-  axios
-    .get("http://localhost:5000/api/getId")
-    .then((response) => {
-      const uname = response.data;
-      setUname(uname);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
-  
 
   return (
     
-    <header className=" w-screen h-screen relative bg-slate overflow-hidden">
+    <div className=" w-screen h-screen relative bg-slate overflow-hidden">
       <Navbar />
-      {/* <img
-        src={ld}
-        className="absolute top-16 left-0 w-1/2 h-half object-cover overflow-hidden"
-      /> */}
       <img
         src={bgi}
         className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden"
@@ -44,6 +26,6 @@ export default function BookConf() {
           Go to homepage
         </a>
       </div>
-    </header>
+    </div>
   );
 }
