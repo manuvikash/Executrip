@@ -12,6 +12,8 @@ import WhyUs from "./pages/WhyUs";
 import ShortlistedGuides from "./pages/ShortlistedGuides";
 import Discover from "./pages/Discover";
 import BookingPage from "./pages/BookingPage";
+import BookingHistory from "./pages/BookingHistory";
+import Settings from "./pages/Settings";
 // import BookConf from "./pages/BookConf";
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/shortlistedguides" element={<ShortlistedGuides />} />
           <Route path="/book" element={<BookingPage />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/bookinghistory" element={<BookingHistory />} />
+          <Route path="/settings" element={<Settings />} />
 
           {/* <Route path="/book-conf" element={<BookConf />} /> */}
         </Routes>

@@ -155,7 +155,7 @@ export default function Navbar() {
               text-black
               hover:bg-purple-300
             "
-                  href="#"
+                  href="bookinghistory"
                 >
                   Booking history
                 </a>
@@ -175,7 +175,7 @@ export default function Navbar() {
               text-black
               hover:bg-purple-300
             "
-                  href="#"
+                  href="settings"
                 >
                   Settings
                 </a>
