@@ -223,8 +223,12 @@ export default function Navbar() {
             <a href="/starred">
               <NavbarMobileItem name={"Starred Guides"} className="item-4" />
             </a>
-            <NavbarMobileItem name={"Booking history"} className="item-5" />
-            <NavbarMobileItem name={"Settings"} className="item-6" />
+            <a href="/bookinghistory">
+              <NavbarMobileItem name={"Booking history"} className="item-5" />
+            </a>
+            <a href="/settings">
+              <NavbarMobileItem name={"Settings"} className="item-6" />
+            </a>
             <a href="/">
               <NavbarMobileItem name={"Logout"} className="item-7" />
             </a>
