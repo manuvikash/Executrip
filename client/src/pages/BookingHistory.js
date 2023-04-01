@@ -7,7 +7,9 @@ const BookingHistory = () => {
   return (
     <header className="w-full h-screen relative overflow-y-auto">
       <Navbar />
-      <h1 class="text-3xl font-bold mb-4">Booking History</h1>
+      <h1 class="text-3xl font-bold mt-20 w-full text-center text-purple-700 mb-4">
+        Booking History
+      </h1>
       <div class="flex flex-col items-center mt-6 mx-6 md:mx-0 lg:mx-0">
         <div class="w-full md:w-1/2 lg:w-1/3">
           <ul class="border-t border-b divide-y divide-gray-200">

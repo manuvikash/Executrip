@@ -220,7 +220,7 @@ export default function Navbar() {
             <a href="/whyus">
               <NavbarMobileItem name={"Why us?"} className="item-3" />
             </a>
-            <a href="/starred">
+            <a href="/shortlistedguides">
               <NavbarMobileItem name={"Starred Guides"} className="item-4" />
             </a>
             <a href="/bookinghistory">
