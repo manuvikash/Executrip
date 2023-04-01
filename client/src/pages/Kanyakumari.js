@@ -1,12 +1,25 @@
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 
 export default function Kanyakumari() {
   const [data, setData] = useState([]);
-  axios
-    .get("http://localhost:5000/api/guides/Kanyakumari")
+  // axios
+  //   .get("http://localhost:5000/api/guides/Kanyakumari")
+  //   .then((response) => {
+  //     const data = response.data;
+  //     setData(data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+
+  axios.defaults.withCredentials = true;
+  useEffect(() => {
+    
+    axios
+    .get("https://temp-production-7bab.up.railway.app/api/guides/Kanyakumari")
     .then((response) => {
       const data = response.data;
       setData(data);
@@ -14,6 +27,7 @@ export default function Kanyakumari() {
     .catch((error) => {
       console.log(error);
     });
+  }, []);
 
   const filteredGuides = data;
   return (

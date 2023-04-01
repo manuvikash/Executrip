@@ -1,9 +1,15 @@
 import Navbar from "../components/Navbar";
-import React from "react";
+import React, { useEffect } from "react";
 import bgVideo from "../assets/bgvideo.mp4";
 import DropdownComponent2 from "../components/Dropdown2";
+import axios from "axios";
 
 const CitySelect = () => {
+  axios.defaults.withCredentials = true;
+  useEffect(() => {
+    axios
+    .get("https://temp-production-7bab.up.railway.app/");
+  }, []);
   return (
     <header className="w-screen h-screen relative bg-slate overflow-hidden">
       <Navbar />

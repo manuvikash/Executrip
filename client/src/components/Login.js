@@ -4,6 +4,7 @@ import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
 import { Redirect } from "react-router-dom";
+import axios from "axios";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -25,13 +26,11 @@ export default function Login() {
 
   //Handle Login API Integration here
   const authenticateUser = () => {
-    fetch("http://localhost:5000/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(loginState),
-    }).then((res) => {
+    axios.defaults.withCredentials = true;
+    axios.get("https://temp-production-7bab.up.railway.app/api/login", {params: {
+      email: loginState['email-address'],
+      password: loginState['password']
+    }}).then((res) => {
       if(res.status == 200) {
         console.log(res.status)
         var win = window.open("/city-select", "_self");

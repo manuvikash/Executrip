@@ -5,8 +5,21 @@ import React, { useState, useEffect } from "react";
 
 export default function Coimbatore() {
   const [data, setData] = useState([]);
-  axios
-    .get("http://localhost:5000/api/guides/Coimbatore")
+  
+  // axios
+  //   .get("http://localhost:5000/api/guides/Coimbatore")
+  //   .then((response) => {
+  //     const data = response.data;
+  //     setData(data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+  
+  useEffect(() => {
+    axios.defaults.withCredentials = true;
+    axios
+    .get("https://temp-production-7bab.up.railway.app/api/guides/Coimbatore")
     .then((response) => {
       const data = response.data;
       setData(data);
@@ -14,6 +27,7 @@ export default function Coimbatore() {
     .catch((error) => {
       console.log(error);
     });
+  }, []);
 
   const filteredGuides = data;
 
