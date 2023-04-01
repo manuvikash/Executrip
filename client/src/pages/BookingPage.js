@@ -36,7 +36,7 @@ export default function BookingPage() {
 
   console.log(guide);
   return (
-    <section className="w-full h-full">
+    <section className="w-screen h-screen">
       <Navbar />
       <div className="h-20"></div>
       <div className="items-center flex flex-col ">
@@ -53,9 +53,9 @@ export default function BookingPage() {
         </p>
       </div>
       <div className="items-left flex flex-col ">
-        <div className="mt-20 mx-24 font-bold text-xl flex justify-between flex-row items-center h-auto ">
+        <div className="mt-20 mx-5 md:mx-24 lg:mx-24 font-bold text-xl flex justify-between md:flex-row lg:flex-row flex-col space-y-3 items-center h-auto ">
           <p className="text-2xl">Date</p>
-          <p className="items-center flex">
+          <p className="items-center flex ml-0 md:ml-3 lg:ml-3">
             From:
             <p className="h-auto w-auto px-10 py-3 mx-5 bg-purple-300 rounded-full">
               <input
@@ -66,7 +66,7 @@ export default function BookingPage() {
               />
             </p>
           </p>
-          <p className="items-center flex">
+          <p className="items-center flex ml-0 md:ml-3 lg:ml-3">
             To:
             <p className="h-auto w-auto px-10 py-3 mx-5 bg-purple-300 rounded-full">
               <input
@@ -79,7 +79,7 @@ export default function BookingPage() {
           </p>
           <div className="flex"></div>
         </div>
-        <div className="mt-10 mx-24 font-bold text-xl flex justify-between flex-row items-center h-auto ">
+        <div className="mt-10 mx-5 md:mx-24 lg:mx-24 font-bold text-xl flex justify-between flex-row items-center h-auto ">
           <p className="text-2xl">Rate</p>
           <p className="items-center flex">
             <p className="h-auto w-auto px-20 py-3 mx-5 bg-purple-300 rounded-full">
@@ -94,19 +94,27 @@ export default function BookingPage() {
         </div>
       </div>
       <div className="items-left flex flex-col ">
-        <div className="mt-10 mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
+        <div className="mt-10 mx-5 md:mx-24 lg:mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
           <p className="text-2xl">Place of Stay</p>
           <p className="items-center flex"></p>
-          <p className="h-auto w-3/5 ml-56 px-10 py-3 mx-32 bg-purple-300 rounded-full">
-            <input type="text" placeholder="" className="bg-purple-300" />
+          <p className="h-auto w-3/5 md:ml-56 lg:ml-56 ml-5 md:px-10 lg:px-10 px-1 py-3 mx-32 bg-purple-300 rounded-full">
+            <input
+              type="text"
+              placeholder=""
+              className="bg-purple-300 w-full"
+            />
           </p>
         </div>
         <div className="items-left flex flex-col ">
-          <div className="mt-10 mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
+          <div className="mt-10 mx-5 md:mx-24 lg:mx-24 font-bold text-xl flex justify-start flex-row items-center h-auto ">
             <p className="text-2xl">Specific attractions(if any)</p>
             <p className="items-center flex"></p>
-            <p className="h-auto w-3/5 px-10 py-3 mx-20 bg-purple-300 rounded-full">
-              <input type="text" placeholder="" className="bg-purple-300" />
+            <p className="h-auto w-3/5 md:px-10 lg:px-10 px-1 py-3 md:ml-56 lg:ml-56 ml-2 bg-purple-300 rounded-full">
+              <input
+                type="text"
+                placeholder=""
+                className="bg-purple-300 w-full"
+              />
             </p>
           </div>
         </div>
